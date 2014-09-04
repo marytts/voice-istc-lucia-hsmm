@@ -3,12 +3,12 @@ voice {
     language 'it'
     gender 'female'
     type 'hsmm'
-    description 'temporary'
+    description 'Italian female Hidden semi-Markov model voice kindly made available by Fabio Tesser'
     samplingRate 16000
 }
 
 license {
-    name 'temporary'
-    shortName 'temporary'
-    url 'temporary'
+    name 'Creative Commons Attribution-NoDerivs 3.0 Unported'
+    shortName 'CC-BY-ND'
+    url 'http://creativecommons.org/licenses/by-nd/3.0/'
 }
