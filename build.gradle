@@ -1,3 +1,5 @@
+apply plugin: 'marytts-voicebuilding'
+
 voice {
     name 'istc-lucia-hsmm'
     language 'it'
