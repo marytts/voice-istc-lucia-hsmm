@@ -1,0 +1,14 @@
+voice {
+    name 'istc-lucia-hsmm'
+    language 'it'
+    gender 'female'
+    type 'hsmm'
+    description 'temporary'
+    samplingRate 16000
+}
+
+license {
+    name 'temporary'
+    shortName 'temporary'
+    url 'temporary'
+}
