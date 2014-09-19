@@ -1,5 +1,7 @@
 apply plugin: 'marytts-voicebuilding'
 
+group "de.dfki.mary"
+
 voice {
     name 'istc-lucia-hsmm'
     language 'it'
