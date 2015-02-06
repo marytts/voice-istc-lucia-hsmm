@@ -2,12 +2,3 @@ apply plugin: 'de.dfki.mary.voicebuilding'
 
 group 'de.dfki.mary'
 version '5.1.2'
-
-voice {
-    name 'istc-lucia-hsmm'
-    language 'it'
-    gender 'female'
-    type 'hsmm'
-    description 'Italian female Hidden semi-Markov model voice kindly made available by Fabio Tesser'
-    samplingRate 16000
-}
