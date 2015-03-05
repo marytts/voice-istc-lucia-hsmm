@@ -1,6 +1,8 @@
 voice {
     name = 'istc-lucia-hsmm'
-    language = 'it'
+    locale {
+        language = 'it'
+    }
     gender = 'female'
     type = 'hsmm'
     description = 'Italian female Hidden semi-Markov model voice kindly made available by Fabio Tesser'
