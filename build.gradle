@@ -1,5 +1,5 @@
 plugins {
-    id 'de.dfki.mary.voicebuilding-base' version '5.2.1'
+    id 'de.dfki.mary.voicebuilding-base' version '5.2.2'
 }
 
 group 'de.dfki.mary'
