@@ -1,56 +1,56 @@
 plugins {
-    id 'de.dfki.mary.voicebuilding-base' version '5.2.2'
+    id 'de.dfki.mary.voicebuilding-base' version '5.5-SNAPSHOT'
 }
 
 group 'de.dfki.mary'
 version '5.3-SNAPSHOT'
 
-voice {
-    name = 'istc-lucia-hsmm'
-    language = 'it'
-    gender = 'female'
-    type = 'hsmm'
-    description = 'Italian female Hidden semi-Markov model voice kindly made available by Fabio Tesser'
-    license {
-        name = 'Creative Commons Attribution-NoDerivs 3.0 Unported'
-        shortName = 'CC-BY-ND'
-        url = 'http://mary.dfki.de/download/by-nd-3.0.html'
+marytts {
+    voice {
+        name = 'istc-lucia-hsmm'
+        language = 'it'
+        gender = 'female'
+        type = 'hsmm'
+        description = 'Italian female Hidden semi-Markov model voice kindly made available by Fabio Tesser'
+        license {
+            name = 'Creative Commons Attribution-NoDerivs 3.0 Unported'
+            shortName = 'CC-BY-ND'
+            url = 'http://mary.dfki.de/download/by-nd-3.0.html'
+        }
+        samplingRate = 16000
     }
-    samplingRate = 16000
 }
 
-afterEvaluate {
-    generateVoiceConfig {
-        config << [
-                alpha               : 0.42,
-                gamma               : 0,
-                logGain             : false,
-                beta                : 0,
-                Ftd                 : 'jar:/marytts/voice/IstcLuciaHsmm/tree-dur.inf',
-                Ftf                 : 'jar:/marytts/voice/IstcLuciaHsmm/tree-lf0.inf',
-                Ftm                 : 'jar:/marytts/voice/IstcLuciaHsmm/tree-mgc.inf',
-                Fts                 : 'jar:/marytts/voice/IstcLuciaHsmm/tree-str.inf',
-                Fmd                 : 'jar:/marytts/voice/IstcLuciaHsmm/dur.pdf',
-                Fmf                 : 'jar:/marytts/voice/IstcLuciaHsmm/lf0.pdf',
-                Fmm                 : 'jar:/marytts/voice/IstcLuciaHsmm/mgc.pdf',
-                Fms                 : 'jar:/marytts/voice/IstcLuciaHsmm/str.pdf',
-                useGV               : true,
-                maxMgcGvIter        : 200,
-                maxLf0GvIter        : 200,
-                Fgvf                : 'jar:/marytts/voice/IstcLuciaHsmm/gv-lf0-littend.pdf',
-                Fgvm                : 'jar:/marytts/voice/IstcLuciaHsmm/gv-mgc-littend.pdf',
-                Fgvs                : 'jar:/marytts/voice/IstcLuciaHsmm/gv-str-littend.pdf',
-                FeaFile             : 'jar:/marytts/voice/IstcLuciaHsmm/s1031.pfeats',
-                trickyPhonesFile    : 'jar:/marytts/voice/IstcLuciaHsmm/trickyPhones.txt',
-                useMixExc           : true,
-                Fif                 : 'jar:/marytts/voice/IstcLuciaHsmm/mix_excitation_filters.txt',
-                in                  : 5,
-                useAcousticModels   : true,
-                acousticModels      : 'duration F0',
-                'duration.model'    : 'hmm',
-                'duration.attribute': 'd',
-                'F0.model'          : 'hmm',
-                'F0.attribute'      : 'f0'
-        ]
-    }
+generateVoiceConfig {
+    config.putAll([
+            alpha               : 0.42,
+            gamma               : 0,
+            logGain             : false,
+            beta                : 0,
+            Ftd                 : 'jar:/marytts/voice/IstcLuciaHsmm/tree-dur.inf',
+            Ftf                 : 'jar:/marytts/voice/IstcLuciaHsmm/tree-lf0.inf',
+            Ftm                 : 'jar:/marytts/voice/IstcLuciaHsmm/tree-mgc.inf',
+            Fts                 : 'jar:/marytts/voice/IstcLuciaHsmm/tree-str.inf',
+            Fmd                 : 'jar:/marytts/voice/IstcLuciaHsmm/dur.pdf',
+            Fmf                 : 'jar:/marytts/voice/IstcLuciaHsmm/lf0.pdf',
+            Fmm                 : 'jar:/marytts/voice/IstcLuciaHsmm/mgc.pdf',
+            Fms                 : 'jar:/marytts/voice/IstcLuciaHsmm/str.pdf',
+            useGV               : true,
+            maxMgcGvIter        : 200,
+            maxLf0GvIter        : 200,
+            Fgvf                : 'jar:/marytts/voice/IstcLuciaHsmm/gv-lf0-littend.pdf',
+            Fgvm                : 'jar:/marytts/voice/IstcLuciaHsmm/gv-mgc-littend.pdf',
+            Fgvs                : 'jar:/marytts/voice/IstcLuciaHsmm/gv-str-littend.pdf',
+            FeaFile             : 'jar:/marytts/voice/IstcLuciaHsmm/s1031.pfeats',
+            trickyPhonesFile    : 'jar:/marytts/voice/IstcLuciaHsmm/trickyPhones.txt',
+            useMixExc           : true,
+            Fif                 : 'jar:/marytts/voice/IstcLuciaHsmm/mix_excitation_filters.txt',
+            in                  : 5,
+            useAcousticModels   : true,
+            acousticModels      : 'duration F0',
+            'duration.model'    : 'hmm',
+            'duration.attribute': 'd',
+            'F0.model'          : 'hmm',
+            'F0.attribute'      : 'f0'
+        ])
 }
